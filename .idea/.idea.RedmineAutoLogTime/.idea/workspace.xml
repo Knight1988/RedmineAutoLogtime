@@ -8,11 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="Update API key retrieval in RedmineService&#10;&#10;Changed the key used for retrieving the API key from &quot;UserApiKey&quot; to &quot;apiKey&quot; in all methods of RedmineService. This ensures consistent naming conventions and avoids confusion between different keys.">
+    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="Added separate Startup project and improved app startup behavior&#10;&#10;Created a separate Startup project that contains logic for allowing application to run at system startup. Also increased the stability and fault-tolerance of the existing RedmineAutoLogTime application. This was achieved by updating the API key retrieval in RedmineService and adding a logger to CheckLogWorker to log exceptions better.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Services/StartupService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Services/StartupService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +41,8 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Diagnostics.Process/src/System/Diagnostics/Process.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e432edeee9469b7cfdb81d6e6bd278cf57afb9e54ab75649b8bb2f52cdde69/ObservableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/App.xaml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/App.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RedmineAutoLogTime/obj/Debug/net6.0-windows/App.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -138,7 +137,7 @@
       <workItem from="1717059240967" duration="7277000" />
       <workItem from="1717120907640" duration="7433000" />
       <workItem from="1717129262761" duration="1949000" />
-      <workItem from="1717137050416" duration="5422000" />
+      <workItem from="1717137050416" duration="6220000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -340,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717136786054</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added separate Startup project and improved app startup behavior&#10;&#10;Created a separate Startup project that contains logic for allowing application to run at system startup. Also increased the stability and fault-tolerance of the existing RedmineAutoLogTime application. This was achieved by updating the API key retrieval in RedmineService and adding a logger to CheckLogWorker to log exceptions better.">
+      <option name="closed" value="true" />
+      <created>1717142898212</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1717142898212</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +357,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add RedmineService and update MainWindow layout&#10;&#10;Implemented RedmineService to fetch issues from the Redmine API and registered it with the dependency injection container. Also modified MainWindow layout to include a ComboBox and a Button for user interaction. These changes set up the basic functionality for the Redmine auto logging application." />
     <MESSAGE value="Update RedmineService and IRedmineService methods&#10;&#10;Refactored the GetMyIssuesAsync method to remove userApiKey as a parameter and implemented a new method, AddLogTimeToIssueAsync, to add log times to an issue. The IRedmineService interface was updated to accommodate these changes. The UserApiKey was also moved to the appsettings.json file for easier and safer management." />
     <MESSAGE value="Update MainWindow.xaml layout and .idea/workspace.xml&#10;&#10;Modified the layout structure for MainWindow.xaml by adding Border and Grid settings. Additionally, the .idea/workspace.xml file has been updated to reflect the changes in task management and various configuration settings." />
     <MESSAGE value="Add UI for logging time and update IRedmineService methods&#10;&#10;The MainWindow UI has been updated with a text box for comments and a ComboBox for activity types. IRedmineService methods have been updated to support comments and activity type selection when logging time. The RedmineActivity enum was also created to facilitate activity type selection." />
@@ -375,7 +381,8 @@
     <MESSAGE value="Implement Serilog in RedmineAutoLogTime&#10;&#10;This commit adds the Serilog logging library to the RedmineAutoLogTime application. Changes were made in the App.xaml.cs and to the dependencies in the csproj file to accommodate this. Additionally, the user API key was removed from the appsettings.json file due to security concerns." />
     <MESSAGE value="Add logger to CheckLogWorker and refactor error handling&#10;&#10;The logger has been added to the CheckLogWorker class to handle and log exceptions better. A refactoring was carried out to provide better error handling for operations that might throw exceptions, such as checking log time and adding log time to issues, improving overall stability and fault-tolerance." />
     <MESSAGE value="Update API key retrieval in RedmineService&#10;&#10;Changed the key used for retrieving the API key from &quot;UserApiKey&quot; to &quot;apiKey&quot; in all methods of RedmineService. This ensures consistent naming conventions and avoids confusion between different keys." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update API key retrieval in RedmineService&#10;&#10;Changed the key used for retrieving the API key from &quot;UserApiKey&quot; to &quot;apiKey&quot; in all methods of RedmineService. This ensures consistent naming conventions and avoids confusion between different keys." />
+    <MESSAGE value="Added separate Startup project and improved app startup behavior&#10;&#10;Created a separate Startup project that contains logic for allowing application to run at system startup. Also increased the stability and fault-tolerance of the existing RedmineAutoLogTime application. This was achieved by updating the API key retrieval in RedmineService and adding a logger to CheckLogWorker to log exceptions better." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added separate Startup project and improved app startup behavior&#10;&#10;Created a separate Startup project that contains logic for allowing application to run at system startup. Also increased the stability and fault-tolerance of the existing RedmineAutoLogTime application. This was achieved by updating the API key retrieval in RedmineService and adding a logger to CheckLogWorker to log exceptions better." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

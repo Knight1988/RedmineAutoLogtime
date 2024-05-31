@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace RedmineAutoLogTime.Services;
 
@@ -6,12 +7,16 @@ public class StartupService : IStartupService
 {
     public void SetRunOnStartup(bool enable)
     {
-        var procStartInfo = new ProcessStartInfo("Startup.exe", enable.ToString())
+        var key =
+            Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true)!;
+        if (enable)
         {
-            UseShellExecute = true,
-            Verb = "runas"
-        };
-
-        Process.Start(procStartInfo);
+            var executePath = AppDomain.CurrentDomain.BaseDirectory;
+            key.SetValue("RedmineAutoLogTime", executePath + "RedmineAutoLogTime.exe");
+        }
+        else
+        {
+            key.DeleteValue("RedmineAutoLogTime", false);
+        }
     }
 }
