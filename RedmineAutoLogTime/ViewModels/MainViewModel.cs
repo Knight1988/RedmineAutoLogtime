@@ -101,8 +101,21 @@ public class MainViewModel : ObservableObject
     {
         try
         {
-            await _redmineService.GetMyIssuesAsync();
-            MessageBox.Show("Connected successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (string.IsNullOrEmpty(ApiKey))
+            {
+                MessageBox.Show("API key is required", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
+            var result = await _redmineService.TestApiKeyAsync(ApiKey);
+            if (result)
+            {
+                MessageBox.Show("Connected successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Connection failed", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         catch (Exception)
         {

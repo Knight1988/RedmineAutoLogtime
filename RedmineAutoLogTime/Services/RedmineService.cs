@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -11,32 +12,28 @@ using RedmineAutoLogTime.Models;
 
 namespace RedmineAutoLogTime.Services;
 
-public class RedmineService : IRedmineService
+public class RedmineService(IConfiguration configuration) : IRedmineService
 {
-    private readonly IConfiguration _configuration;
-
-    public RedmineService(IConfiguration configuration)
+    public async Task<bool> TestApiKeyAsync(string apiKey)
     {
-        _configuration = configuration;
-    }
-
-    public async Task<List<Issue>> GetMyIssuesAsync()
-    {
-        var userApiKey = _configuration.GetValue<string>("apiKey");
         var httpClient = new HttpClient();
-        httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
-        var response =
-            await httpClient.GetStringAsync("https://redmine.vti.com.vn/issues.json?assigned_to_id=me&status_id=!*5|6");
-
-        var issues = JsonSerializer.Deserialize<IssueList>(response);
-
-        return issues!.Issues;
+        httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", apiKey);
+        
+        try
+        {
+            var response = await httpClient.GetStringAsync("https://redmine.vti.com.vn/users/current.json");
+            return true;
+        }
+        catch (HttpRequestException e) when (e.StatusCode == HttpStatusCode.Unauthorized || e.StatusCode == HttpStatusCode.Forbidden)
+        {
+            return false;
+        }
     }
 
     public async Task AddLogTimeToIssueAsync(string issueId, float hours, string comments, string spentOn,
         RedmineActivity redmineActivity)
     {
-        var userApiKey = _configuration.GetValue<string>("apiKey")!;
+        var userApiKey = configuration.GetValue<string>("apiKey")!;
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
 
@@ -65,7 +62,7 @@ public class RedmineService : IRedmineService
 
     public async Task<List<LogTime>> GetTodayLogTimesAsync()
     {
-        var userApiKey = _configuration.GetValue<string>("apiKey");
+        var userApiKey = configuration.GetValue<string>("apiKey");
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
         var response =
@@ -80,7 +77,7 @@ public class RedmineService : IRedmineService
     {
         try
         {
-            var userApiKey = _configuration.GetValue<string>("apiKey");
+            var userApiKey = configuration.GetValue<string>("apiKey");
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
             var response = await httpClient.GetStringAsync($"https://redmine.vti.com.vn/issues/{issueId}.json");
