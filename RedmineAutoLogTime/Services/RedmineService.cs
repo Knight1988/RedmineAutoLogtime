@@ -22,7 +22,7 @@ public class RedmineService : IRedmineService
 
     public async Task<List<Issue>> GetMyIssuesAsync()
     {
-        var userApiKey = _configuration.GetValue<string>("UserApiKey");
+        var userApiKey = _configuration.GetValue<string>("apiKey");
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
         var response =
@@ -36,7 +36,7 @@ public class RedmineService : IRedmineService
     public async Task AddLogTimeToIssueAsync(string issueId, float hours, string comments, string spentOn,
         RedmineActivity redmineActivity)
     {
-        var userApiKey = _configuration.GetValue<string>("UserApiKey")!;
+        var userApiKey = _configuration.GetValue<string>("apiKey")!;
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
 
@@ -65,7 +65,7 @@ public class RedmineService : IRedmineService
 
     public async Task<List<LogTime>> GetTodayLogTimesAsync()
     {
-        var userApiKey = _configuration.GetValue<string>("UserApiKey");
+        var userApiKey = _configuration.GetValue<string>("apiKey");
         var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
         var response =
@@ -80,7 +80,7 @@ public class RedmineService : IRedmineService
     {
         try
         {
-            var userApiKey = _configuration.GetValue<string>("UserApiKey");
+            var userApiKey = _configuration.GetValue<string>("apiKey");
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("X-Redmine-API-Key", userApiKey);
             var response = await httpClient.GetStringAsync($"https://redmine.vti.com.vn/issues/{issueId}.json");
