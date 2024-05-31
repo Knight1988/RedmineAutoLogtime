@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\repos\\RedmineAutoLogTime\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|e:\\repos\\redmineautologtime\\startup\\startup.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|solutionrelative:startup\\startup.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|e:\\repos\\redmineautologtime\\startup\\startup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|solutionrelative:startup\\startup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|e:\\repos\\redmineautologtime\\startup\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|solutionrelative:startup\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|e:\\repos\\redmineautologtime\\startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFD7CE88-B148-401C-B7C4-512CC18A1401}|Startup\\Startup.csproj|solutionrelative:startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6363982-3AE9-4723-843B-3A8C080BDA80}|RedmineAutoLogTime\\RedmineAutoLogTime.csproj|e:\\repos\\redmineautologtime\\redmineautologtime\\redmineautologtime.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C6363982-3AE9-4723-843B-3A8C080BDA80}|RedmineAutoLogTime\\RedmineAutoLogTime.csproj|solutionrelative:redmineautologtime\\redmineautologtime.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Startup",
+              "DocumentMoniker": "E:\\repos\\RedmineAutoLogTime\\Startup\\Startup.csproj",
+              "RelativeDocumentMoniker": "Startup\\Startup.csproj",
+              "ToolTip": "E:\\repos\\RedmineAutoLogTime\\Startup\\Startup.csproj",
+              "RelativeToolTip": "Startup\\Startup.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-31T07:46:50.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup",
+              "DocumentMoniker": "E:\\repos\\RedmineAutoLogTime\\Startup\\Startup.csproj",
+              "RelativeDocumentMoniker": "Startup\\Startup.csproj",
+              "ToolTip": "E:\\repos\\RedmineAutoLogTime\\Startup\\Startup.csproj",
+              "RelativeToolTip": "Startup\\Startup.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-31T07:46:48.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.manifest",
+              "DocumentMoniker": "E:\\repos\\RedmineAutoLogTime\\Startup\\app.manifest",
+              "RelativeDocumentMoniker": "Startup\\app.manifest",
+              "ToolTip": "E:\\repos\\RedmineAutoLogTime\\Startup\\app.manifest",
+              "RelativeToolTip": "Startup\\app.manifest",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2024-05-31T07:40:16.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\repos\\RedmineAutoLogTime\\Startup\\Program.cs",
+              "RelativeDocumentMoniker": "Startup\\Program.cs",
+              "ToolTip": "E:\\repos\\RedmineAutoLogTime\\Startup\\Program.cs",
+              "RelativeToolTip": "Startup\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T07:39:42.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RedmineAutoLogTime",
+              "DocumentMoniker": "E:\\repos\\RedmineAutoLogTime\\RedmineAutoLogTime\\RedmineAutoLogTime.csproj",
+              "RelativeDocumentMoniker": "RedmineAutoLogTime\\RedmineAutoLogTime.csproj",
+              "ToolTip": "E:\\repos\\RedmineAutoLogTime\\RedmineAutoLogTime\\RedmineAutoLogTime.csproj",
+              "RelativeToolTip": "RedmineAutoLogTime\\RedmineAutoLogTime.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-31T07:38:06.931Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

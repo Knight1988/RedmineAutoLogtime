@@ -32,8 +32,11 @@ namespace RedmineAutoLogTime
 
         private void ConfigureServices(IServiceCollection services)
         {
+            var basePath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            Directory.SetCurrentDirectory(basePath ?? throw new InvalidOperationException());
+            
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+                .SetBasePath(basePath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile("user-settings.json", optional: true, reloadOnChange: true);
             IConfiguration configuration = builder.Build();
