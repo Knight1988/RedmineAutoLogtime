@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using WpfDependencyInjectionSample.ViewModels;
 
 namespace RedmineAutoLogTime.ViewModels;
 

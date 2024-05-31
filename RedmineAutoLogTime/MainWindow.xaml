@@ -3,10 +3,51 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RedmineAutoLogTime"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Closing="MainWindow_OnClosing"
+        Title="Redmine Auto LogTime" Height="450" Width="800">
+    <Window.DataContext>
+        <Binding Source="{StaticResource ViewModelLocator}" Path="MainWindow"></Binding>
+    </Window.DataContext>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
 
+        <!-- API Key -->
+        <Label Content="API Key:" Grid.Row="0" Grid.Column="0" Margin="0,0,10,10" />
+        <TextBox Text="{Binding ApiKey}" Grid.Row="0" Grid.Column="1" Margin="0,0,10,10" VerticalAlignment="Center"/>
+        <Button Content="Connect" Command="{Binding ConnectCommand}" Width="75" Grid.Row="0" Grid.Column="2"
+                Margin="0,0,0,10" />
+
+        <!-- Issue -->
+        <Label Content="Issue:" Grid.Row="1" Grid.Column="0" Margin="0,0,10,10" />
+        <TextBox Text="{Binding IssueSubject}" IsReadOnly="True" Grid.Row="1" Grid.Column="1" Margin="0,0,10,10" VerticalAlignment="Center"/>
+        <TextBox Text="{Binding IssueId}" TextChanged="OnTextChanged" Grid.Row="1" Grid.Column="2" Margin="0,0,0,10" VerticalAlignment="Center"/>
+
+        <!-- Comment -->
+        <Label Content="Comment:" Grid.Row="2" Grid.Column="0" Margin="0,0,10,10" />
+        <TextBox Text="{Binding Comment}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,0,10" VerticalAlignment="Center"/>
+
+        <!-- Activity -->
+        <Label Content="Activity:" Grid.Row="3" Grid.Column="0" Margin="0,0,10,10" />
+        <ComboBox ItemsSource="{Binding Activities}" SelectedItem="{Binding SelectedActivity}" Grid.Row="3"
+                  Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,0,10" VerticalAlignment="Center"/>
+        
+        <!-- Run On Startup Checkbox -->
+        <CheckBox Content="Run on window startup" IsChecked="{Binding RunOnStartup}" Grid.Row="4" Grid.Column="0" Margin="0,0,10,10" />
+        
+        <!-- Save Button -->
+        <Button Content="Save" Command="{Binding SaveCommand}" Width="75" HorizontalAlignment="Right" Grid.Row="4"
+                Grid.Column="2" Margin="0,0,0,10" />
     </Grid>
 </Window>
