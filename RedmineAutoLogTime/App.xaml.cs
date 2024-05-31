@@ -32,7 +32,7 @@ namespace RedmineAutoLogTime
 
         private void ConfigureServices(IServiceCollection services)
         {
-            var basePath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            var basePath = AppDomain.CurrentDomain.BaseDirectory;
             Directory.SetCurrentDirectory(basePath ?? throw new InvalidOperationException());
             
             var builder = new ConfigurationBuilder()
