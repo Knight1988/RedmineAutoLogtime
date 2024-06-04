@@ -1,0 +1,134 @@
+﻿[
+  {
+    "id": 17,
+    "name": "Project Management"
+  },
+  {
+    "id": 49,
+    "name": "Training (process, rules,…)"
+  },
+  {
+    "id": 30,
+    "name": "Join project meeting"
+  },
+  {
+    "id": 31,
+    "name": "Report task/status/quality"
+  },
+  {
+    "id": 32,
+    "name": "Tracking task status"
+  },
+  {
+    "id": 21,
+    "name": "Configuration Management"
+  },
+  {
+    "id": 33,
+    "name": "Study REQ/Q&A"
+  },
+  {
+    "id": 10,
+    "name": "Create REQ documents"
+  },
+  {
+    "id": 34,
+    "name": "Review REQ documents"
+  },
+  {
+    "id": 35,
+    "name": "Correct REQ documents"
+  },
+  {
+    "id": 8,
+    "name": "Create Design"
+  },
+  {
+    "id": 36,
+    "name": "Review Design"
+  },
+  {
+    "id": 37,
+    "name": "Correct Design"
+  },
+  {
+    "id": 9,
+    "name": "Coding"
+  },
+  {
+    "id": 38,
+    "name": "Review code"
+  },
+  {
+    "id": 39,
+    "name": "Correct code"
+  },
+  {
+    "id": 41,
+    "name": "Create UT documents"
+  },
+  {
+    "id": 40,
+    "name": "Review UT documents"
+  },
+  {
+    "id": 42,
+    "name": "Correct UT documents"
+  },
+  {
+    "id": 22,
+    "name": "Execute UT"
+  },
+  {
+    "id": 44,
+    "name": "Review IT documents"
+  },
+  {
+    "id": 43,
+    "name": "Create IT documents"
+  },
+  {
+    "id": 45,
+    "name": "Correct IT documents"
+  },
+  {
+    "id": 12,
+    "name": "Execute IT"
+  },
+  {
+    "id": 46,
+    "name": "Create ST documents"
+  },
+  {
+    "id": 47,
+    "name": "Review ST documents"
+  },
+  {
+    "id": 48,
+    "name": "Correct ST documents"
+  },
+  {
+    "id": 13,
+    "name": "Execute ST"
+  },
+  {
+    "id": 14,
+    "name": "Deployment"
+  },
+  {
+    "id": 15,
+    "name": "Customer Support"
+  },
+  {
+    "id": 18,
+    "name": "Translation"
+  },
+  {
+    "id": 16,
+    "name": "PQA"
+  },
+  {
+    "id": 19,
+    "name": "Others"
+  }
+]

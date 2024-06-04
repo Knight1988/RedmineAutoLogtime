@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
-using RedmineAutoLogTime.Enums;
 using RedmineAutoLogTime.Interfaces.Services;
 using RedmineAutoLogTime.Messages;
 using RedmineAutoLogTime.Models;
@@ -21,14 +19,15 @@ public class MainViewModel : ObservableObject
     private readonly IUserSettingService _userSettingService;
     private readonly IStartupService _startupService;
 
-    private RedmineActivity _selectedActivity;
+    private Activity? _selectedActivity;
     private string? _issueId;
     private string? _issueSubject;
     private bool _runOnStartup;
     private string? _apiKey;
     private string? _comment;
+    private readonly ObservableCollection<Activity>? _activities;
 
-    public MainViewModel(IRedmineService redmineService, IUserSettingService userSettingService, IStartupService startupService)
+    public MainViewModel(IRedmineService redmineService, IUserSettingService userSettingService, IStartupService startupService, IActivityService activityService)
     {
         _redmineService = redmineService;
         _userSettingService = userSettingService;
@@ -37,10 +36,11 @@ public class MainViewModel : ObservableObject
         var userSettings = userSettingService.LoadUserSettings();
         ApiKey = userSettings.ApiKey;
         Comment = userSettings.Comment;
-        SelectedActivity = (RedmineActivity)userSettings.Activity;
+        SelectedActivity = userSettings.Activity;
         RunOnStartup = userSettings.RunOnStartup;
         IssueSubject = userSettings.IssueSubject;
         IssueId = userSettings.IssueId;
+        Activities = new ObservableCollection<Activity>(activityService.ReadActivitiesFromJson() ?? []);
         
         WeakReferenceMessenger.Default.Register<TextChangedMessage>(this, OnTextChanged);
     }
@@ -84,12 +84,13 @@ public class MainViewModel : ObservableObject
         set => SetProperty(ref _comment, value);
     }
 
-    public List<RedmineActivity> Activities { get; } = new()
+    public ObservableCollection<Activity>? Activities
     {
-        RedmineActivity.Coding
-    };
+        get => _activities;
+        private init => SetProperty(ref _activities, value);
+    }
 
-    public RedmineActivity SelectedActivity
+    public Activity? SelectedActivity
     {
         get => _selectedActivity;
         set => SetProperty(ref _selectedActivity, value);
@@ -130,7 +131,7 @@ public class MainViewModel : ObservableObject
         var userSettings = _userSettingService.LoadUserSettings();
         userSettings.ApiKey = ApiKey;
         userSettings.Comment = Comment;
-        userSettings.Activity = (int)SelectedActivity;
+        userSettings.Activity = SelectedActivity;
         userSettings.RunOnStartup = RunOnStartup;
         userSettings.IssueSubject = IssueSubject;
         userSettings.IssueId = IssueId;

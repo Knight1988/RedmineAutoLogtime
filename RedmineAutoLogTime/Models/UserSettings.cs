@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using RedmineAutoLogTime.Services;
 
 namespace RedmineAutoLogTime.Models;
 
@@ -8,7 +9,7 @@ public class UserSettings
     public string? ApiKey { get; set; }
 
     [JsonPropertyName("activity")]
-    public int Activity { get; set; }
+    public Activity? Activity { get; set; }
 
     [JsonPropertyName("comment")]
     public string? Comment { get; set; }

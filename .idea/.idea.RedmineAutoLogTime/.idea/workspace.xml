@@ -9,9 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Services/ActivityService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RedmineAutoLogTime/activities.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Interfaces/Services/IRedmineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Interfaces/Services/IRedmineService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Services/RedmineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Services/RedmineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Models/UserSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Models/UserSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/ViewModels/MainViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/ViewModels/MainViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +48,9 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Diagnostics.Process/src/System/Diagnostics/Process.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e432edeee9469b7cfdb81d6e6bd278cf57afb9e54ab75649b8bb2f52cdde69/ObservableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/Interfaces/Services/IRedmineService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/Services/RedmineService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/ViewModels/MainViewModel.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -56,29 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.RedmineAutoLogTime.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.Startup.executor&quot;: &quot;Debug&quot;,
-    &quot;Publish to folder.Publish RedmineAutoLogTime to folder.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.XAML&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.RedmineAutoLogTime.executor": "Debug",
+    ".NET Project.Startup.executor": "Debug",
+    "Publish to folder.Publish RedmineAutoLogTime to folder.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/refactor__activity",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.XAML",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\anh.phamviet\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\anh.phamviet\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.RedmineAutoLogTime">
     <configuration name="Publish RedmineAutoLogTime to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" target_folder="$PROJECT_DIR$/RedmineAutoLogTime/bin/Release/net6.0-windows/win-x64/publish" target_framework="net6.0-windows" uuid_high="-4164077573960546525" uuid_low="-8918470263972308352" />
@@ -121,7 +127,8 @@
       <workItem from="1717129262761" duration="1949000" />
       <workItem from="1717137050416" duration="6220000" />
       <workItem from="1717143991999" duration="2159000" />
-      <workItem from="1717147697828" duration="967000" />
+      <workItem from="1717147697828" duration="2751000" />
+      <workItem from="1717490777590" duration="928000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -355,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717145071984</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Refactor RedmineService methods for API key testing and cleanup &#10;&#10;Redesigned the method of testing API key and removed GetMyIssuesAsync() function from RedmineService. Also disposed unnecessary instances correctly for efficient memory usage. Optimized MainViewModel to use the updated API key testing with appropriate user prompts.">
+      <option name="closed" value="true" />
+      <created>1717148724555</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717148724555</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +380,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Updated UI layout and added user settings feature&#10;&#10;Refactored the UI layout in MainWindow.xaml for better readability and user experience. A new feature that reads and writes user settings in a JSON file was introduced, allowing users to save their API keys and issue activity comments. The service that handles the functionality was also created and included in dependency injection." />
     <MESSAGE value="Update MainViewModel and project files&#10;&#10;MainViewModel was updated to include configurations for IRedmineService and IUserSettingService. Project files were also updated to handle additional functionalities and streamline the task management process. Various .xml settings were tweaked to improve project performance. Lastly, LangVersion was set to 'default' in the RedmineAutoLogTime.csproj file." />
     <MESSAGE value="Refactor UserSettingService and update UserSettings model&#10;&#10;UserSettingService has been simplified with the methods SaveApiKey and SaveIssueActivityComment replaced by a universal SaveUserSettings. LoadUserSettings has also been updated to safely load user settings with exception handling. Changes were made in the UserSettings model to align with the updated service, with some properties such as IssueId replaced by an Issue object and additional JSON property naming attributes." />
     <MESSAGE value="Refactor MainWindow.xaml and update MainViewModel &#10;&#10;MainWindow.xaml has been refactored for better readability and user experience. The MainViewModel file has been updated to simplify the management of activities." />
@@ -390,7 +404,8 @@
     <MESSAGE value="Remove 'Startup' project and refactor startup logic&#10;&#10;Deleted the 'Startup' project and updated the 'StartupService' within the 'RedmineAutoLogTime' application to handle the startup process. The new implementation relies on Registry manipulation to enable or disable launching the application at system startup." />
     <MESSAGE value="Update Assembly and File versions to 0.1.1&#10;&#10;A minor version bump was made reflecting the changes to the RedmineAutoLogTime project. Now both AssemblyVersion and AssemblyFileVersion are updated to 0.1.1." />
     <MESSAGE value="Update base path retrieval method&#10;&#10;Changed the method of retrieving the base path in `App.xaml.cs` from `System.Reflection.Assembly.GetExecutingAssembly().Location` to `AppDomain.CurrentDomain.BaseDirectory`. This approach is more reliable and less prone to certain exceptions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update base path retrieval method&#10;&#10;Changed the method of retrieving the base path in `App.xaml.cs` from `System.Reflection.Assembly.GetExecutingAssembly().Location` to `AppDomain.CurrentDomain.BaseDirectory`. This approach is more reliable and less prone to certain exceptions." />
+    <MESSAGE value="Refactor RedmineService methods for API key testing and cleanup &#10;&#10;Redesigned the method of testing API key and removed GetMyIssuesAsync() function from RedmineService. Also disposed unnecessary instances correctly for efficient memory usage. Optimized MainViewModel to use the updated API key testing with appropriate user prompts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor RedmineService methods for API key testing and cleanup &#10;&#10;Redesigned the method of testing API key and removed GetMyIssuesAsync() function from RedmineService. Also disposed unnecessary instances correctly for efficient memory usage. Optimized MainViewModel to use the updated API key testing with appropriate user prompts." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,6 +415,19 @@
           <line>5</line>
           <properties documentPath="E:\repos\RedmineAutoLogTime\Startup\Program.cs" containingFunctionPresentation="" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RedmineAutoLogTime/ViewModels/MainViewModel.cs</url>
+          <line>43</line>
+          <properties documentPath="E:\repos\RedmineAutoLogTime\RedmineAutoLogTime\ViewModels\MainViewModel.cs" containingFunctionPresentation="Constructor 'MainViewModel'">
+            <startOffsets>
+              <option value="1681" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1762" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

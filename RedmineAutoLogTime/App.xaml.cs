@@ -58,6 +58,7 @@ namespace RedmineAutoLogTime
             services.AddSingleton<IUserSettingService, UserSettingService>();
             services.AddSingleton<ISystemTrayService, SystemTrayService>();
             services.AddSingleton<IStartupService, StartupService>();
+            services.AddSingleton<IActivityService, ActivityService>();
 
             // Windows
             services.AddSingleton<MainWindow>();

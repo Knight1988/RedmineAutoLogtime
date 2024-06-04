@@ -1,4 +1,4 @@
-﻿namespace RedmineAutoLogTime.Services;
+﻿namespace RedmineAutoLogTime.Interfaces.Services;
 
 public interface IStartupService
 {
