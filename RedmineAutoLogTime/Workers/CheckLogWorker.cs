@@ -44,32 +44,35 @@ public class CheckLogWorker : BackgroundService
     {
         var logTimes = await _redmineService.GetTodayLogTimesAsync();
         var total = logTimes.Sum(l => l.Hours);
-        // if total > 8 then message box 
-        if (total > 8)
+        switch (total)
         {
-            // Show message box 
-            MessageBox.Show("You have logged more than 8 hours today!");
-        }
-
-        if (total == 0)
-        {
-            var activity = _configuration.GetValue<int>("activity");
-            var comment = _configuration.GetValue<string>("comment");
-            var issueId = _configuration.GetValue<string>("issueId");
-                
-            // add validate for configuration
-            if (issueId != null && !string.IsNullOrEmpty(comment))
+            // if total > 8 then message box 
+            case > 8:
+                // Show message box 
+                MessageBox.Show("You have logged more than 8 hours today!");
+                break;
+            case 0:
             {
-                try 
+                var activity = _configuration.GetSection("activity").Get<Activity>();
+                var comment = _configuration.GetValue<string>("comment");
+                var issueId = _configuration.GetValue<string>("issueId");
+                
+                // add validate for configuration
+                if (issueId != null && !string.IsNullOrEmpty(comment) && activity != null)
                 {
-                    await _redmineService.AddLogTimeToIssueAsync(issueId, 8, comment,
-                        DateTime.Now.ToString("yyyy-MM-dd"), (RedmineActivity)activity);
-                    MessageBox.Show("A logtime has been created!");
-                } 
-                catch(Exception e) 
-                {
-                    _logger.LogError(e, "An error occurred while adding logtime");
+                    try 
+                    {
+                        await _redmineService.AddLogTimeToIssueAsync(issueId, 8, comment,
+                            DateTime.Now.ToString("yyyy-MM-dd"), activity);
+                        MessageBox.Show("A logtime has been created!");
+                    } 
+                    catch(Exception e) 
+                    {
+                        _logger.LogError(e, "An error occurred while adding logtime");
+                    }
                 }
+
+                break;
             }
         }
 

@@ -30,8 +30,7 @@ public class RedmineService(IConfiguration configuration) : IRedmineService
         }
     }
 
-    public async Task AddLogTimeToIssueAsync(string issueId, float hours, string comments, string spentOn,
-        RedmineActivity redmineActivity)
+    public async Task AddLogTimeToIssueAsync(string issueId, float hours, string comments, string spentOn, Activity activity)
     {
         var userApiKey = configuration.GetValue<string>("apiKey")!;
         var httpClient = new HttpClient();
@@ -45,7 +44,7 @@ public class RedmineService(IConfiguration configuration) : IRedmineService
                 spent_on = spentOn,
                 hours = hours,
                 comments = comments,
-                activity_id = (int)redmineActivity
+                activity_id = activity.Id
             }
         };
 
