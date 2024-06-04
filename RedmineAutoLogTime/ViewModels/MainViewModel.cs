@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -9,7 +10,6 @@ using CommunityToolkit.Mvvm.Messaging;
 using RedmineAutoLogTime.Interfaces.Services;
 using RedmineAutoLogTime.Messages;
 using RedmineAutoLogTime.Models;
-using RedmineAutoLogTime.Services;
 
 namespace RedmineAutoLogTime.ViewModels;
 
@@ -19,13 +19,13 @@ public class MainViewModel : ObservableObject
     private readonly IUserSettingService _userSettingService;
     private readonly IStartupService _startupService;
 
-    private Activity? _selectedActivity;
     private string? _issueId;
     private string? _issueSubject;
     private bool _runOnStartup;
     private string? _apiKey;
     private string? _comment;
     private readonly ObservableCollection<Activity>? _activities;
+    private int? _selectedActivityId;
 
     public MainViewModel(IRedmineService redmineService, IUserSettingService userSettingService, IStartupService startupService, IActivityService activityService)
     {
@@ -36,7 +36,7 @@ public class MainViewModel : ObservableObject
         var userSettings = userSettingService.LoadUserSettings();
         ApiKey = userSettings.ApiKey;
         Comment = userSettings.Comment;
-        SelectedActivity = userSettings.Activity;
+        SelectedActivityId = userSettings.Activity?.Id;
         RunOnStartup = userSettings.RunOnStartup;
         IssueSubject = userSettings.IssueSubject;
         IssueId = userSettings.IssueId;
@@ -90,10 +90,10 @@ public class MainViewModel : ObservableObject
         private init => SetProperty(ref _activities, value);
     }
 
-    public Activity? SelectedActivity
+    public int? SelectedActivityId
     {
-        get => _selectedActivity;
-        set => SetProperty(ref _selectedActivity, value);
+        get => _selectedActivityId;
+        set => SetProperty(ref _selectedActivityId, value);
     }
 
     public ICommand ConnectCommand => new AsyncRelayCommand(ConnectAsync);
@@ -131,7 +131,7 @@ public class MainViewModel : ObservableObject
         var userSettings = _userSettingService.LoadUserSettings();
         userSettings.ApiKey = ApiKey;
         userSettings.Comment = Comment;
-        userSettings.Activity = SelectedActivity;
+        userSettings.Activity = Activities?.SingleOrDefault(p => p.Id == SelectedActivityId);
         userSettings.RunOnStartup = RunOnStartup;
         userSettings.IssueSubject = IssueSubject;
         userSettings.IssueId = IssueId;

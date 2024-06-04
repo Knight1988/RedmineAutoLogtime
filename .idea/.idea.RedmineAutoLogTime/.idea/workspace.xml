@@ -8,11 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="Add ActivityService and refactor MainViewModel&#10;&#10;Introduced a new service, ActivityService, to handle the reading of Activity objects from a JSON file. MainViewModel has been updated to accommodate this change. Also made minor modifications to related services, models, and XAML files to ensure proper utilization of the new service.">
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Interfaces/Services/IRedmineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Interfaces/Services/IRedmineService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Services/RedmineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Services/RedmineService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/Workers/CheckLogWorker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/Workers/CheckLogWorker.cs" afterDir="false" />
-    </list>
+    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +40,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Diagnostics.Process/src/System/Diagnostics/Process.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e432edeee9469b7cfdb81d6e6bd278cf57afb9e54ab75649b8bb2f52cdde69/ObservableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/Workers/CheckLogWorker.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -57,7 +54,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.RedmineAutoLogTime.executor": "Debug",
+    ".NET Project.RedmineAutoLogTime.executor": "Run",
     ".NET Project.Startup.executor": "Debug",
     "Publish to folder.Publish RedmineAutoLogTime to folder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -121,7 +118,7 @@
       <workItem from="1717137050416" duration="6220000" />
       <workItem from="1717143991999" duration="2159000" />
       <workItem from="1717147697828" duration="2751000" />
-      <workItem from="1717490777590" duration="1825000" />
+      <workItem from="1717490777590" duration="2684000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -371,7 +368,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717492285863</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactor IRedmineService to use Activity model&#10;&#10;The IRedmineService's AddLogTimeToIssueAsync method was refactored to accept an instance of the Activity model instead of RedmineActivity. This change simplifies the usage of this method and improves the readability of the code. The accompanying implementation in RedmineService and the usage in CheckLogWorker were also updated accordingly.">
+      <option name="closed" value="true" />
+      <created>1717492786571</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717492786571</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Refactor CheckLogWorker class constructor&#10;&#10;The CheckLogWorker class constructor has been refactored to improve code readability and eliminate the use of private read-only field declarations. The required services (IConfiguration, IRedmineService, ILogger) are now directly accessed in the method bodies, instead of being assigned to private fields in the constructor.">
+      <option name="closed" value="true" />
+      <created>1717492918106</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1717492918106</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Update binding for SelectedActivity in MainWindow.xaml&#10;&#10;MainWindow.xaml's ComboBox's selectedItem binding was changed to selectedValue. The SelectedActivity property of the MainViewModel class was also updated accordingly. Now it holds the ID of the selected activity instead of the entire Activity object. Other project files have been updated to reflect these changes.">
+      <option name="closed" value="true" />
+      <created>1717493489912</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717493489912</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,9 +402,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Refactor UserSettingService and update UserSettings model&#10;&#10;UserSettingService has been simplified with the methods SaveApiKey and SaveIssueActivityComment replaced by a universal SaveUserSettings. LoadUserSettings has also been updated to safely load user settings with exception handling. Changes were made in the UserSettings model to align with the updated service, with some properties such as IssueId replaced by an Issue object and additional JSON property naming attributes." />
-    <MESSAGE value="Refactor MainWindow.xaml and update MainViewModel &#10;&#10;MainWindow.xaml has been refactored for better readability and user experience. The MainViewModel file has been updated to simplify the management of activities." />
-    <MESSAGE value="Add log time tracking and fetching functionality&#10;&#10;Added functionality to track and fetch log times in Redmine, specifically for the current day. This involved creating new models for User and LogTime, and enhancing the IRedmineService interface and RedmineService class to support fetching of today's log times. A new async test command was also added to MainViewModel." />
     <MESSAGE value="Implement background service for log time tracking&#10;&#10;A background service for log time tracking has been implemented in an app, replacing the previous manual service collection setup. The application startup process has been revised accordingly. In addition, new dependencies to support this feature have been added to the project." />
     <MESSAGE value="Enable data context binding and enhance user settings and log time addition&#10;&#10;This update includes binding the &quot;ViewModelLocator&quot; to the MainWindow data context in the MainWindow.xaml file. In the UserSettingService.cs file, JSON serialization options have been added to format the user settings updates. The" />
     <MESSAGE value=" configuration settings. These enhancements include validating configurations before adding log time and showing a message box when a log time has been created." />
@@ -406,7 +424,10 @@
     <MESSAGE value="Update base path retrieval method&#10;&#10;Changed the method of retrieving the base path in `App.xaml.cs` from `System.Reflection.Assembly.GetExecutingAssembly().Location` to `AppDomain.CurrentDomain.BaseDirectory`. This approach is more reliable and less prone to certain exceptions." />
     <MESSAGE value="Refactor RedmineService methods for API key testing and cleanup &#10;&#10;Redesigned the method of testing API key and removed GetMyIssuesAsync() function from RedmineService. Also disposed unnecessary instances correctly for efficient memory usage. Optimized MainViewModel to use the updated API key testing with appropriate user prompts." />
     <MESSAGE value="Add ActivityService and refactor MainViewModel&#10;&#10;Introduced a new service, ActivityService, to handle the reading of Activity objects from a JSON file. MainViewModel has been updated to accommodate this change. Also made minor modifications to related services, models, and XAML files to ensure proper utilization of the new service." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ActivityService and refactor MainViewModel&#10;&#10;Introduced a new service, ActivityService, to handle the reading of Activity objects from a JSON file. MainViewModel has been updated to accommodate this change. Also made minor modifications to related services, models, and XAML files to ensure proper utilization of the new service." />
+    <MESSAGE value="Refactor IRedmineService to use Activity model&#10;&#10;The IRedmineService's AddLogTimeToIssueAsync method was refactored to accept an instance of the Activity model instead of RedmineActivity. This change simplifies the usage of this method and improves the readability of the code. The accompanying implementation in RedmineService and the usage in CheckLogWorker were also updated accordingly." />
+    <MESSAGE value="Refactor CheckLogWorker class constructor&#10;&#10;The CheckLogWorker class constructor has been refactored to improve code readability and eliminate the use of private read-only field declarations. The required services (IConfiguration, IRedmineService, ILogger) are now directly accessed in the method bodies, instead of being assigned to private fields in the constructor." />
+    <MESSAGE value="Update binding for SelectedActivity in MainWindow.xaml&#10;&#10;MainWindow.xaml's ComboBox's selectedItem binding was changed to selectedValue. The SelectedActivity property of the MainViewModel class was also updated accordingly. Now it holds the ID of the selected activity instead of the entire Activity object. Other project files have been updated to reflect these changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update binding for SelectedActivity in MainWindow.xaml&#10;&#10;MainWindow.xaml's ComboBox's selectedItem binding was changed to selectedValue. The SelectedActivity property of the MainViewModel class was also updated accordingly. Now it holds the ID of the selected activity instead of the entire Activity object. Other project files have been updated to reflect these changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,32 +437,6 @@
           <line>5</line>
           <properties documentPath="E:\repos\RedmineAutoLogTime\Startup\Program.cs" containingFunctionPresentation="" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedmineAutoLogTime/ViewModels/MainViewModel.cs</url>
-          <line>44</line>
-          <properties documentPath="E:\repos\RedmineAutoLogTime\RedmineAutoLogTime\ViewModels\MainViewModel.cs" containingFunctionPresentation="Constructor 'MainViewModel'">
-            <startOffsets>
-              <option value="1714" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1795" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RedmineAutoLogTime/Workers/CheckLogWorker.cs</url>
-          <line>57</line>
-          <properties documentPath="E:\repos\RedmineAutoLogTime\RedmineAutoLogTime\Workers\CheckLogWorker.cs" containingFunctionPresentation="Method 'CheckLogTimeAsync'">
-            <startOffsets>
-              <option value="1821" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1878" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
