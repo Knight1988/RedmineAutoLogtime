@@ -60,6 +60,8 @@ public class CheckLogWorker(
                     } 
                     catch(Exception e) 
                     {
+                        MessageBox.Show("An error occurred while adding logtime", "Error", MessageBoxButton.OK,
+                            MessageBoxImage.Error);
                         logger.LogError(e, "An error occurred while adding logtime");
                     }
                 }
