@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
+using CommunityToolkit.Mvvm.Input;
 using Hardcodet.Wpf.TaskbarNotification;
 
 namespace RedmineAutoLogTime.Services;
@@ -38,6 +39,7 @@ public class SystemTrayService : ISystemTrayService
         contextMenu.Items.Add(exitItem);
 
         _taskbarIcon.ContextMenu = contextMenu;
+        _taskbarIcon.DoubleClickCommand = new RelayCommand(() => _mainWindow.Show());
     }
 
     private static void Exit()
