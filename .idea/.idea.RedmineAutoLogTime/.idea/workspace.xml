@@ -8,7 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="" />
+    <list default="true" id="aeccf3d8-c070-4f9b-8ce8-212be01de2ab" name="Changes" comment="Update AssemblyVersion and FileVersion to 0.1.2&#10;&#10;Increased the AssemblyVersion and FileVersion from 0.1.1 to 0.1.2 in the RedmineAutoLogTime project. This change reflects the new version of the software.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RedmineAutoLogTime/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RedmineAutoLogTime/RedmineAutoLogTime.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,13 +37,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///CheckLogWorker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/JsonConverterOfT.ReadCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/System.Text.Json/src/System/Text/Json/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Diagnostics.Process/src/System/Diagnostics/Process.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e2ca2f8a1c5b643df628c85842a8f2b362b2c441/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e432edeee9469b7cfdb81d6e6bd278cf57afb9e54ab75649b8bb2f52cdde69/ObservableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/repos/RedmineAutoLogTime/RedmineAutoLogTime/Workers/CheckLogWorker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedmineAutoLogTime/Services/SystemTrayService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -52,30 +54,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.RedmineAutoLogTime.executor": "Run",
-    ".NET Project.Startup.executor": "Debug",
-    "Publish to folder.Publish RedmineAutoLogTime to folder.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/refactor__activity",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.XAML",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.RedmineAutoLogTime.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.Startup.executor&quot;: &quot;Debug&quot;,
+    &quot;Publish to folder.Publish RedmineAutoLogTime to folder.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/refactor__activity&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.XAML&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\anh.phamviet\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\anh.phamviet\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\anh.phamviet\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.RedmineAutoLogTime">
+}</component>
+  <component name="RunManager" selected="Publish to folder.Publish RedmineAutoLogTime to folder">
     <configuration name="Publish RedmineAutoLogTime to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" ready_to_run="true" runtime="win-x64" target_folder="$PROJECT_DIR$/RedmineAutoLogTime/bin/Release/net6.0-windows/win-x64/publish" target_framework="net6.0-windows" uuid_high="-4164077573960546525" uuid_low="-8918470263972308352" />
       <method v="2" />
@@ -119,6 +121,9 @@
       <workItem from="1717143991999" duration="2159000" />
       <workItem from="1717147697828" duration="2751000" />
       <workItem from="1717490777590" duration="2684000" />
+      <workItem from="1717561052821" duration="2259000" />
+      <workItem from="1718334815287" duration="343000" />
+      <workItem from="1718346950019" duration="984000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -392,7 +397,39 @@
       <option name="project" value="LOCAL" />
       <updated>1717493489912</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add error dialog to CheckLogWorker&#10;&#10;An error dialog has been added to the CheckLogWorker class. Now, when an error occurs while adding log time, the user will be notified with a GUI message box, and not just a console error log. This enhancement was introduced to improve user feedback and alert users when an operation fails.">
+      <option name="closed" value="true" />
+      <created>1717561235878</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717561235878</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add double click functionality to SystemTray icon&#10;&#10;A DoubleClickCommand has been added to the SystemTray icon in the SystemTrayService. This implementation uses the RelayCommand to show the main application window upon double-click. This change enhances user interaction by providing a quicker way for users to access the main window.">
+      <option name="closed" value="true" />
+      <created>1717567689611</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717567689611</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Refactor SystemTrayService class &#10;&#10;Removed the _mainWindow field from SystemTrayService class and used constructor parameter instead. Updated references to _mainWindow in the Init() method to reflect this change.">
+      <option name="closed" value="true" />
+      <created>1717569615281</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1717569615281</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Update AssemblyVersion and FileVersion to 0.1.2&#10;&#10;Increased the AssemblyVersion and FileVersion from 0.1.1 to 0.1.2 in the RedmineAutoLogTime project. This change reflects the new version of the software.">
+      <option name="closed" value="true" />
+      <created>1718347984366</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1718347984366</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,10 +439,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implement background service for log time tracking&#10;&#10;A background service for log time tracking has been implemented in an app, replacing the previous manual service collection setup. The application startup process has been revised accordingly. In addition, new dependencies to support this feature have been added to the project." />
-    <MESSAGE value="Enable data context binding and enhance user settings and log time addition&#10;&#10;This update includes binding the &quot;ViewModelLocator&quot; to the MainWindow data context in the MainWindow.xaml file. In the UserSettingService.cs file, JSON serialization options have been added to format the user settings updates. The" />
-    <MESSAGE value=" configuration settings. These enhancements include validating configurations before adding log time and showing a message box when a log time has been created." />
-    <MESSAGE value="Add system tray service and app icon&#10;&#10;SystemTrayService was added in the services to handle system tray icon and actions. Additionally, an application icon graphics" />
     <MESSAGE value="Implement window close behavior and exit function&#10;&#10;Reduced unnecessary usings and added code in MainWindow.xaml.cs to hide the application instead of closing it when the window close button is clicked. Added exit behavior in SystemTrayService.cs to truly exit the application. Furthermore, a new class ShutdownMessage was created with currently no implementations." />
     <MESSAGE value="Update window closing behavior and refactor system tray service&#10;&#10;The MainWindow now only hides, instead of fully closing. This change was implemented to enable interaction through system tray. Refactored SystemTrayService to improve maintainability and simplicity. Added the ability for the user to exit the application from the system tray." />
     <MESSAGE value="Update character encoding and increase delay in CheckLogWorker&#10;&#10;Replaced special characters with their corresponding HTML entities in workspace.xml for better compatibility across different systems. Also, increased the delay time from 1 minute to 10 minutes in CheckLogWorker.cs for better system performance." />
@@ -427,7 +460,11 @@
     <MESSAGE value="Refactor IRedmineService to use Activity model&#10;&#10;The IRedmineService's AddLogTimeToIssueAsync method was refactored to accept an instance of the Activity model instead of RedmineActivity. This change simplifies the usage of this method and improves the readability of the code. The accompanying implementation in RedmineService and the usage in CheckLogWorker were also updated accordingly." />
     <MESSAGE value="Refactor CheckLogWorker class constructor&#10;&#10;The CheckLogWorker class constructor has been refactored to improve code readability and eliminate the use of private read-only field declarations. The required services (IConfiguration, IRedmineService, ILogger) are now directly accessed in the method bodies, instead of being assigned to private fields in the constructor." />
     <MESSAGE value="Update binding for SelectedActivity in MainWindow.xaml&#10;&#10;MainWindow.xaml's ComboBox's selectedItem binding was changed to selectedValue. The SelectedActivity property of the MainViewModel class was also updated accordingly. Now it holds the ID of the selected activity instead of the entire Activity object. Other project files have been updated to reflect these changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update binding for SelectedActivity in MainWindow.xaml&#10;&#10;MainWindow.xaml's ComboBox's selectedItem binding was changed to selectedValue. The SelectedActivity property of the MainViewModel class was also updated accordingly. Now it holds the ID of the selected activity instead of the entire Activity object. Other project files have been updated to reflect these changes." />
+    <MESSAGE value="Add error dialog to CheckLogWorker&#10;&#10;An error dialog has been added to the CheckLogWorker class. Now, when an error occurs while adding log time, the user will be notified with a GUI message box, and not just a console error log. This enhancement was introduced to improve user feedback and alert users when an operation fails." />
+    <MESSAGE value="Add double click functionality to SystemTray icon&#10;&#10;A DoubleClickCommand has been added to the SystemTray icon in the SystemTrayService. This implementation uses the RelayCommand to show the main application window upon double-click. This change enhances user interaction by providing a quicker way for users to access the main window." />
+    <MESSAGE value="Refactor SystemTrayService class &#10;&#10;Removed the _mainWindow field from SystemTrayService class and used constructor parameter instead. Updated references to _mainWindow in the Init() method to reflect this change." />
+    <MESSAGE value="Update AssemblyVersion and FileVersion to 0.1.2&#10;&#10;Increased the AssemblyVersion and FileVersion from 0.1.1 to 0.1.2 in the RedmineAutoLogTime project. This change reflects the new version of the software." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update AssemblyVersion and FileVersion to 0.1.2&#10;&#10;Increased the AssemblyVersion and FileVersion from 0.1.1 to 0.1.2 in the RedmineAutoLogTime project. This change reflects the new version of the software." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
